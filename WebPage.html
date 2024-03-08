@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #fff;
+            color: #000;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo {
+            max-width: 100px;
+            height: auto;
+            padding: 20px; /* Added padding to the logo */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            color: #000;
+        }
+
+        nav button:hover::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: violet; /* Violet color underline on hover */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .your-account {
+            background-color: lightpink;
+            color: blue;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .left-half {
+            width: 48%; /* Adjust width as needed */
+        }
+
+        .right-half {
+            width: 48%; /* Adjust width as needed */
+        }
+
+        .image-container {
+            width: 100%;
+            text-align: center;
+        }
+
+        .text-container {
+            padding-top: 70px;
+            padding-left: 100px;
+            padding-right: 20px; /* Adjust padding as needed */
+        }
+
+        .options-container {
+            width:300px;
+            padding-left: 100px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            cursor: pointer;
+            background-color: #e4e1e1; /* Grey color */
+            color: white; /* White text color */
+            padding: 10px;
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .option:hover .left-logo {
+            content: url('blueButton.jpeg'); /* Change to the path of the other logo file on hover */
+        }
+
+        .option:hover {
+            background-color: white; /* Highlight background in white on hover */
+        }
+
+        .option-text {
+            color: #000; /* Grayer color for the text on the extreme left */
+        }
+
+        .left-logo, .right-logo {
+            width: 20px; /* Adjust width as needed */
+            height: 20px; /* Adjust height as needed */
+        }
+        
+        .right-logo {
+            margin-left: 10px; /* Add margin for separation */
+        }
+
+        .new-account-button {
+            background-color: blue;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .arrow-img {
+            width: 40px;
+            height: 40px;
+            padding-top: 10px;
+            padding-left: 20px; /* Adjust padding as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Your logo goes here -->
+        <img id="logo" src="logo.jpeg" alt="Your Logo">
+        
+        <nav>
+            <button>Home</button>
+            <button>About</button>
+            <button>Blog</button>
+            <button>Jobs</button>
+        </nav>
+
+        <button class="your-account">Your Account</button>
+    </header>
+
+    <main>
+        <div class="left-half">
+            <div class="text-container">
+                <h2 style="font-size:70px;">Stunning Workplace.</h2>
+                <p>With stunning, remote teams can organize projects, manage shifting priorities, and get work done.</p>
+                <div style="display:flex; align-items: center;">
+                    <button class="new-account-button">New Account</button>
+                    <img src="arrow.png" class="arrow-img" alt="Arrow Image">
+                </div>
+            </div>
+
+            <div class="options-container">
+                <div class="option">
+                    <img src="whiteArrow.jpeg" class="left-logo" alt="Left Logo 1">
+                    <span class="option-text">Dmm Design</span>
+                    <img src="red.jpeg" class="right-logo" alt="Right Logo 1">
+                    <span class="option-text">20 Dec</span>
+                </div>
+                <div class="option">
+                    <img src="whiteArrow.jpeg" class="left-logo" alt="Left Logo 2">
+                    <span class="option-text">Blurr Animation</span>
+                    <img src="yellow.jpeg" class="right-logo" alt="Right Logo 2">
+                    <span class="option-text">22 Dec</span>
+                </div>
+                <div class="option">
+                    <img src="whiteArrow.jpeg" class="left-logo" alt="Left Logo 3">
+                    <span class="option-text">Illustration</span>
+                    <img src="blue.jpeg" class="right-logo" alt="Right Logo 3">
+                    <span class="option-text">26 Dec</span>
+                </div>
+                <div class="option">
+                    <img src="whiteArrow.jpeg" class="left-logo" alt="Left Logo 4">
+                    <span class="option-text">Refunds</span>
+                    <img src="orange.jpeg" class="right-logo" alt="Right Logo 4">
+                    <span class="option-text">28 Dec</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-half">
+            <div class="image-container">
+                <!-- Replace "MainImage.jpeg" with the actual path or URL of your image -->
+                <img src="MainImage.jpeg" alt="Your Image">
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
